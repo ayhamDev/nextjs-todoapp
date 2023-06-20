@@ -2,17 +2,15 @@
 import { useState } from "react";
 import TodoItem from "./TodoItem";
 
-export type TodoType = [
-  {
-    id: string;
-    title: string;
-    complete: boolean;
-  }
-];
+export type TodoType = {
+  id: string;
+  title: string;
+  complete: boolean;
+};
 type TodoProps = {
-  Todos: TodoType;
-  ToggleTodo: () => void;
-  removeTodo: () => void;
+  Todos: TodoType[];
+  toggleTodo: (id: string, complete: boolean) => void;
+  removeTodo: (id: string) => void;
 };
 
 export default function Todo({ Todos, toggleTodo, removeTodo }: TodoProps) {

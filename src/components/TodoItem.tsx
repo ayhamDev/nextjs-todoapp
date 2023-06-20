@@ -6,10 +6,10 @@ type TodoItemPropstype = {
   id: string;
   title: string;
   complete: boolean;
-  todos: object[];
+  todos: TodoType[];
   toggleTodo: (id: string, complete: boolean) => void;
   removeTodo: (id: string) => void;
-  state: Dispatch<SetStateAction<TodoType>>;
+  state: Dispatch<SetStateAction<TodoType[]>>;
 };
 export default function TodoItem({
   id,
